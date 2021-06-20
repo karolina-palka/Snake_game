@@ -41,3 +41,12 @@ while is_game_on:
         time.sleep(1)
         is_game_on = False
         score.game_over()
+
+    #for i in range(len(snake.segments) - 1, 0, -1):
+     #   if (snake.head.distance(snake.segments[i]))< 10:
+    for segment in snake.segments[1:]:
+    
+        if (snake.head.distance(segment)) < 10:
+            is_game_on = False
+            score.game_over()
+            time.sleep(1)
