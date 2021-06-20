@@ -10,7 +10,6 @@ class Scoreboard(Turtle):
         self.goto(0, 280)
         self.update_scoreboard()
         self.hideturtle()
-        #self.write((0, 280), True)
 
     def update_scoreboard(self):
         self.clear()
@@ -25,4 +24,4 @@ class Scoreboard(Turtle):
         self.penup()
         self.hideturtle()
         self.goto(0, 0)
-        self.write("Game over", align=ALIGNMENT, font=FONT)
+        self.write("GAME OVER", align=ALIGNMENT, font=FONT)

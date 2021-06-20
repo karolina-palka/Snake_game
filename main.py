@@ -1,4 +1,3 @@
-#
 
 from turtle import Screen
 from snake import Snake
@@ -28,7 +27,6 @@ while is_game_on:
     screen.update()
     time.sleep(0.1)
     snake.move()
-    #if (snake.get_snake_head_poisiton()== [food.x_index, food.y_index]):
     if snake.head.distance(food) < 15:
         x = snake.head.xcor()
         y = snake.head.ycor()
@@ -38,14 +36,12 @@ while is_game_on:
         snake.extend()
 
     if (snake.head.xcor() > 290 or snake.head.ycor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() < -290):
-        time.sleep(1)
         is_game_on = False
         score.game_over()
+        time.sleep(1)
 
-    #for i in range(len(snake.segments) - 1, 0, -1):
-     #   if (snake.head.distance(snake.segments[i]))< 10:
     for segment in snake.segments[1:]:
-    
+
         if (snake.head.distance(segment)) < 10:
             is_game_on = False
             score.game_over()
